@@ -8,7 +8,6 @@ const getUpComingMovies = () => {
 };
 
 const getMovies = (movieApi: string) => {
-  debugger;
   return axios
     .get<IMovie[]>(`${process.env.REACT_APP_API_BASE_URL}/${movieApi}`)
     .then((response) => response.data);

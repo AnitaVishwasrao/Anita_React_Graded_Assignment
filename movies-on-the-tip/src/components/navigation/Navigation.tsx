@@ -1,9 +1,15 @@
-import React, { useState, useEffect, ChangeEventHandler } from "react";
+import React, {
+  useState,
+  useEffect,
+  ChangeEventHandler,
+  useContext,
+} from "react";
 import { Container, Tab, Form, Nav, InputGroup } from "react-bootstrap";
 import MovieList from "../movies/MovieList";
 import { MOVIE_API } from "../../GlobalConstants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import MovieContext from "../context/MovieContext";
 
 type Props = {
   contextHandler: Function;
@@ -15,7 +21,6 @@ const Navigation = ({ contextHandler }: Props) => {
 
   const onSelectedTabChange = (eventKey: any) => {
     setKey(eventKey);
-    console.log(key);
     contextHandler(eventKey);
   };
 

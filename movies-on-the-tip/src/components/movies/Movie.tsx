@@ -57,10 +57,9 @@ const Movie = ({ movie, showRemove, changeHandler }: Props) => {
       const filteredMovies = favMovies.filter(
         (x) => x.title.toLowerCase() === movie.title.toLocaleLowerCase()
       );
-      debugger;
       if (filteredMovies.length == 0) {
         let movieToAdd: Omit<IMovie, "id"> = prepareAddToMovieObj();
-        const result = await addFavouriteMovie(movieToAdd );
+        const result = await addFavouriteMovie(movieToAdd);
         setShowToast(true);
         setToastMsg(`${movie.title} added to favourites`);
         setIsError(false);

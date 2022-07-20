@@ -13,7 +13,7 @@ const Base = ({ showNav, showBackToHome, children, contextHandler }: Props) => {
   return (
     <>
       {showNav && <Navigation contextHandler={contextHandler} />}
-      {showBackToHome && <BackToHome />}
+      {showBackToHome && <BackToHome contextHandler={contextHandler} />}
 
       <Container fluid>{children}</Container>
     </>
