@@ -1,6 +1,5 @@
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext } from "react";
 import { Navbar, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
